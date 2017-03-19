@@ -1,66 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/inicio_de_sesion"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#FF99CC00"
+    android:background="#5B5A5C"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.andres.myapplication.MainActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
 
-</LinearLayout>
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/activity_horizontal_margin"
-        android:id="@+id/button"
-        android:text="LOGIN"
-        android:layout_alignParentBottom="true"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="136dp" />
+        android:layout_alignParentStart="true">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:background="#ffff"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:InputType="E-mail"
-        android:hint="E-mail"
-        android:layout_above="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="100dp" />
-    <EditText
-        android:layout_width="match_parent"
-        android:background="#ffff"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:InputType="Password"
-        android:hint="Password"
-        android:layout_above="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="50dp" />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/crash2"
+            android:id="@+id/imageView" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Not a member? Sing up now"
-        android:id="@+id/textView"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="59dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="0dp"
+            android:hint="E-mal"
+            android:id="@+id/email"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blanco"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:id="@+id/password"
+            android:background="@color/blanco"
+            android:layout_marginTop="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.gms.common.SignInButton
+                android:layout_gravity="center"
+                android:id="@+id/signInButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/singInBtn"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"
+                android:text="Sing in"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_register"
+            android:id="@+id/registerManually"
+            android:gravity="center" />
+    </LinearLayout>
 
 
 </RelativeLayout>

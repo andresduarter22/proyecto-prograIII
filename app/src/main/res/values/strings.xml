@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">NO</string>
+    <string name="text_register">Not a member? Sing up now</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_email">E-Mail</string>
+    <string name="btn_button">LOGIN</string>
+    <string name="title_activity_menu_principal">menu_principal</string>
+    <string name="not_log_in" />
 </resources>
